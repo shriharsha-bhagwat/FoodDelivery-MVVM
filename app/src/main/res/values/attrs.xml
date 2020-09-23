@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+	
+	<declare-styleable name="LoadingView">
+		<attr name="loadStrokeColor" format="color|reference" />
+		<attr name="loadStrokeWidth" format="dimension"/>
+	</declare-styleable>
+
+	<declare-styleable name="RoundedImageView">
+		<attr name="imgCornerRadius" format="dimension" />
+	</declare-styleable>
+
+	<declare-styleable name="Switcher">
+		<attr name="elevation" />
+		<attr name="switcher_width" format="dimension"/>
+		<attr name="switcher_height" format="dimension"/>
+		<attr name="android:checked" format="boolean" />
+		<attr name="switcher_on_color" format="color|reference" />
+		<attr name="switcher_off_color" format="color|reference" />
+		<attr name="switcher_icon_color" format="color|reference" />
+	</declare-styleable>
+
+	<declare-styleable name="CircularProgressBar">
+		<attr name="barBackgroundColor" format="color|reference" />
+		<attr name="barForegroundColor" format="color|reference" />
+		<attr name="android:textColor" />
+	</declare-styleable>
+
+</resources>

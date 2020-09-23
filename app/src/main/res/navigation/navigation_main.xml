@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/navigation_main"
+	app:startDestination="@+id/homeFragment">
+
+	<action android:id="@+id/navMainHome"
+		app:destination="@id/homeFragment"
+		app:enterAnim="@anim/fragment_fade_enter"
+		app:exitAnim="@anim/fragment_fade_exit"
+		/>
+
+	<action android:id="@+id/navMainProfile"
+		app:destination="@id/profileFragment"
+		app:enterAnim="@anim/fragment_fade_enter"
+		app:exitAnim="@anim/fragment_fade_exit"
+		/>
+
+	<action android:id="@+id/navMainSettings"
+		app:destination="@id/settingsFragment"
+		app:enterAnim="@anim/fragment_fade_enter"
+		app:exitAnim="@anim/fragment_fade_exit"
+		/>
+
+
+	<fragment android:id="@+id/homeFragment"
+		android:name="com.kopa.me.driver.presentation.ui.home.HomeFragment"
+		android:label="LIVE TASK"
+		tools:layout="@layout/fragment_home"
+		/>
+
+	<fragment android:id="@+id/profileFragment"
+		android:name="com.kopa.me.driver.presentation.ui.home.ProfileFragment"
+		android:label="Profile"
+		tools:layout="@layout/fragment_profile"
+		/>
+
+	<fragment android:id="@+id/settingsFragment"
+		android:name="com.kopa.me.driver.presentation.ui.settings.SettingsFragment"
+		android:label="SettingsFragment"
+		tools:layout="@layout/fragment_settings"
+		/>
+
+</navigation>

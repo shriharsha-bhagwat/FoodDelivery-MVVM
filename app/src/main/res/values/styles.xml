@@ -1,0 +1,60 @@
+<resources>
+
+	<style name="My.Widget.TextView" parent="@style/Widget.MaterialComponents.TextView">
+		<item name="android:textAppearance">@style/My.TA.Body1</item>
+	</style>
+
+	<style name="BaseSwitcher">
+		<item name="switcher_off_color">#d62828</item>
+		<item name="switcher_on_color">#1FF678</item>
+		<item name="switcher_width">50dp</item>
+		<item name="switcher_height">30dp</item>
+		<item name="elevation">2dp</item>
+	</style>
+
+	<style name="Switcher" parent="BaseSwitcher"/>
+
+	<style name="BaseProgress">
+		<item name="barBackgroundColor">#e1e7e9</item>
+		<item name="barForegroundColor">@color/colorSecondary</item>
+		<item name="android:textColor">?attr/colorOnBackground</item>
+
+	</style>
+
+	<style name="CircularProgress" parent="BaseProgress"/>
+	
+	<style name="LoadingView">
+		<item name="loadStrokeColor">@android:color/white</item>
+		<item name="loadStrokeWidth">4dp</item>
+	</style>
+	
+	<!-- button with icon at center
+	button size should be x2 than icon size you provided in
+	-->
+
+    <!-- button with letter at center -->
+
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Cut" parent="">
+		<item name="cornerFamily">rounded</item>
+		<item name="cornerSizeTopRight">0dp</item>
+		<item name="cornerSizeTopLeft">0dp</item>
+		<item name="cornerSizeBottomRight">16dp</item>
+		<item name="cornerSizeBottomLeft">16dp</item>
+	</style>
+
+    <style name="PauseDialogAnimation">
+		<item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+		<item name="android:windowExitAnimation">@android:anim/fade_out</item>
+	</style>
+
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+	<style name="AppTheme.NoActionBar">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+
+
+</resources>

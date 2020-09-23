@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.kopa.me.driver.presentation.ui.common.custom.components.LoadingView
+	android:id="@+id/loadingView"
+	android:layout_width="50dp"
+	android:layout_height="50dp"
+	android:layout_gravity="center"
+	
+	app:loadStrokeColor="@android:color/white"
+	
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	/>

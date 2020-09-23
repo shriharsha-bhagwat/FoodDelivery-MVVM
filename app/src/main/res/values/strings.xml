@@ -1,0 +1,29 @@
+<resources>
+	
+	<string name="app_name" translatable="false">Kopa</string>
+	
+	
+<!-- ********************************** fragment_fuel_history ********************************** -->
+    <!-- ******************************************************************************************* -->
+
+
+<!-- ******************************** fragment_fuel_history_add ******************************** -->
+
+    <!-- ******************************************************************************************* -->
+
+
+    <string name="logout"><u><b>Logout</b></u></string>
+    <string name="location_title">Enable Location</string>
+	<string name="location_message">Your location needs to be turned on when you are in duty</string>
+	<string name="go_to_settings_location">Go to Settings</string>
+	<string name="i_want_to_do_laterr">Not right now!</string>
+	<string name="go_to_settings">Go to Settings</string>
+	<string name="permissions_have_to">Allow location permissions from settings.</string>
+	<string name="dialog_ok">Okay</string>
+    <string name="online_status_success">Online status set successfully!</string>
+	<string name="offline_status_success">You are off the Duty!</string>
+    <string name="duty_status_set_error">Can not update the Status!</string>
+	<string name="off_duty">Off Duty</string>
+	<string name="on_duty">On Duty</string>
+
+</resources>

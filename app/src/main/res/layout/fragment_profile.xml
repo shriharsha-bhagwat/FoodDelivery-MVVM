@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.kopa.me.driver.presentation.ui.home.ProfileViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorSecondary"
+        app:applySystemWindowInsetsMarginTop="@{true}"
+        tools:context=".presentation.ui.MainActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_ver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_hor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".25" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_hor_with_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_hor"
+            app:layout_constraintGuide_percent=".15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_hor_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_hor"
+            app:layout_constraintGuide_percent=".9" />
+
+        <View
+            android:id="@+id/topLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_hor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/layout_email_password"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:animateLayoutChanges="true"
+            android:background="?attr/colorOnPrimary"
+            android:backgroundTint="?attr/colorOnPrimary"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_hor_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_hor_with_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <com.kopa.me.driver.presentation.ui.common.custom.components.Switcher
+                    android:id="@+id/switch_on_duty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_on_duty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Off Duty"
+                    android:textColor="@color/colorOnBackground"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@{viewModel.driverProfileData.firstname + viewModel.driverProfileData.lastname}"
+                    android:textColor="@color/colorOnBackground"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/text_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@{viewModel.driverProfileData.phone}"
+                    android:textColor="@color/colorOnBackground" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbarFadeDuration="3000">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/layout_my_profile"
+                            style="@style/Profile.Menu"
+                            android:drawableStart="@drawable/ic_user"
+                            android:drawableEnd="@drawable/menu_arrow_active"
+                            android:onClick="@{() -> viewModel.onProfileDetail()}"
+                            android:text="My Profile" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/layout_my_document"
+                            style="@style/Profile.Menu"
+                            android:drawableStart="@drawable/ic_paper"
+                            android:drawableEnd="@drawable/menu_arrow_active"
+                            android:text="My Document" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/layout_my_payment"
+                            style="@style/Profile.Menu"
+                            android:drawableStart="@drawable/ic_pay"
+                            android:drawableEnd="@drawable/menu_arrow_active"
+                            android:text="Payment" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/layout_my_earning"
+                            style="@style/Profile.Menu"
+                            android:drawableStart="@drawable/ic_money"
+                            android:drawableEnd="@drawable/menu_arrow_active"
+                            android:text="Earnings" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/layout_trip_history"
+                            style="@style/Profile.Menu"
+                            android:drawableStart="@drawable/ic_box"
+                            android:drawableEnd="@drawable/menu_arrow_active"
+                            android:text="Trip History" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/layout_my_help"
+                            style="@style/Profile.Menu"
+                            android:drawableStart="@drawable/ic_question"
+                            android:drawableEnd="@drawable/menu_arrow_active"
+                            android:text="Help" />
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile_pic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="@string/app_name"
+            android:translationZ="26dp"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_hor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/layout_logout"
+            style="@style/Profile.Link"
+            android:drawableEnd="@drawable/menu_arrow_active"
+            android:fontFamily="@font/m_plus_rounded1c_medium"
+            android:onClick="@{() -> viewModel.onLogout()}"
+            android:text="@string/logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_hor_bottom" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

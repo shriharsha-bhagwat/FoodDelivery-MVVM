@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- The color displayed most frequently across your app’s screens and components. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- A tonal variation of the primary color. -->
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+
+        <!-- The secondary branding color, usually an accented complement to the primary branding color. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <!-- A tonal variation of the secondary color. -->
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+
+        <!-- Color affect surfaces of components, such as cards, sheets, and menus. -->
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+
+        <!-- Error color indicates errors states, for components such as text fields -->
+        <item name="colorError">@color/colorError</item>
+        <item name="colorOnError">@color/colorOnError</item>
+
+        <!-- The background color appears behind scrollable content. -->
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
+
+        <!-- system colors -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!-- or it can be set by providing <item name="colorPrimaryDark">@color/colorPrimaryDark</item> -->
+        <item name="android:statusBarColor">@color/colorStatusBar</item>
+
+        <!-- widgets styles -->
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Primary</item>
+
+        <!-- text appearances -->
+        <item name="android:textViewStyle">@style/My.Widget.TextView</item>
+        <item name="textAppearanceHeadline1">@style/My.TA.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/My.TA.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/My.TA.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/My.TA.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/My.TA.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/My.TA.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/My.TA.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/My.TA.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/My.TA.Body1</item>
+        <item name="textAppearanceBody2">@style/My.TA.Body2</item>
+        <item name="textAppearanceCaption">@style/My.TA.Caption</item>
+        <item name="textAppearanceButton">@style/My.TA.Button</item>
+        <item name="textAppearanceOverline">@style/My.TA.Overline</item>
+
+    </style>
+
+
+    <style name="App.Simple.Text" parent="ThemeOverlay.MaterialComponents">
+
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorOnBackground</item>
+    </style>
+
+    <style name="Profile.Menu" parent="ThemeOverlay.MaterialComponents">
+
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawableTint">@color/colorPrimary</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/colorOnBackground</item>
+    </style>
+
+    <style name="Profile.Link" parent="ThemeOverlay.MaterialComponents">
+        <item name="android:textViewStyle">@style/My.TA.Headline3</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+
+    </style>
+
+</resources>

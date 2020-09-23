@@ -1,0 +1,48 @@
+{
+  "result": {
+    "data": [
+      {
+        "value": 30.48,
+        "marka": "Client",
+        "slug": "Client"
+      }
+    ],
+    "date": "2020-08-28",
+    "type": [
+      {
+        "name": " Joey",
+        "id": 2
+      },
+      {
+        "name": " Chandler",
+        "id": 3
+      },
+      {
+        "name": " Ross",
+        "id": 4
+      },
+      {
+        "name": "Monica",
+        "id": 5
+      },
+      {
+        "name": "Pheobe",
+        "id": 6
+      },
+      {
+        "name": " Rachael",
+        "id": 1
+      }
+    ]
+  },
+  "total": [
+    {
+      "minval": "30.48",
+      "maxval": "30.48",
+      "avgval": "30.48"
+    }
+  ],
+  "old": [
+
+  ]
+}
